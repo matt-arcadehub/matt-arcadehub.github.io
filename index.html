@@ -218,6 +218,14 @@
       border-radius: 12px;
     }
 
+    .project > a {
+      cursor: pointer;
+    }
+
+    .project > a:hover .project-image {
+      filter: brightness(1.08);
+    }
+
     .project-image {
       display: block;
       width: 100%;
@@ -428,14 +436,21 @@
 
         <div class="projects">
           <article class="project">
-            <img
-             class="project-image"
-              src="assets/projects/relic-showcase.jpg"
-              alt="Three stylized relics showcasing Arcane, Toxic and Solar materials"
-              width="1568"
-              height="882"
-              loading="lazy"
-            />
+            <a
+              href="https://github.com/matt-arcadehub/Relic-Lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Relic Lab on GitHub"
+            >
+              <img
+                class="project-image"
+                src="assets/projects/relic-showcase.jpg"
+                alt="Three stylized relics showcasing Arcane, Toxic and Solar materials"
+                width="1568"
+                height="882"
+                loading="lazy"
+              />
+            </a>
 
             <div class="project-content">
               <h3>Relic Lab</h3>
@@ -461,12 +476,19 @@
           </article>
 
           <article class="project">
-            <img
-              class="project-image"
-              src="assets/projects/eulaan.jpg"
-              alt="Eulaan: Guardian's Path promotional artwork featuring Koru"
-              loading="lazy"
-            />
+            <a
+              href="https://www.artstation.com/matt_artt"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Eulaan artwork on ArtStation"
+            >
+              <img
+                class="project-image"
+                src="assets/projects/eulaan.jpg"
+                alt="Eulaan: Guardian's Path promotional artwork featuring Koru"
+                loading="lazy"
+              />
+            </a>
 
             <div class="project-content">
               <h3>Eulaan: Guardian's Path</h3>
@@ -493,12 +515,19 @@
           </article>
 
           <article class="project">
-            <img
-              class="project-image"
-              src="assets/projects/elixir-gameplay.jpg"
-              alt="Elixir gameplay mockup showing a character inside a fantasy library"
-              loading="lazy"
-            />
+            <a
+              href="https://mattdavinci.itch.io/elixir-hasta-la-ultima-pagina"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Play Elixir on Itch.io"
+            >
+              <img
+                class="project-image"
+                src="assets/projects/elixir-gameplay.jpg"
+                alt="Elixir gameplay mockup showing a character inside a fantasy library"
+                loading="lazy"
+              />
+            </a>
 
             <div class="project-content">
               <h3>Elixir: Hasta la última página</h3>
