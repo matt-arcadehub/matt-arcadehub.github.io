@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Matías Montiel | Technical Artist & Tools Programmer</title>
+  <meta
+    name="description"
+    content="Portfolio of Matías Montiel, a software developer transitioning into game development, focused on Technical Art and Tools Programming."
+  />
+
+  <style>
+    :root {
+      --background: #211f2a;
+      --surface: #2e2a39;
+      --surface-hover: #393344;
+      --border: #484253;
+      --text: #f1eef5;
+      --muted: #b9b3c5;
+      --accent: #6fd5c6;
+      --accent-dark: #247e76;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI",
+        sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 76px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .nav a,
+    .social-links a {
+      color: var(--muted);
+    }
+
+    .nav a:hover,
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 100px 0 90px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 0;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+    }
+
+    .hero h2 {
+      margin: 14px 0 24px;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .hero p {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .button-primary {
+      color: #152322;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .button-primary:hover {
+      background: #91e6d9;
+    }
+
+    .button-secondary:hover {
+      background: var(--surface-hover);
+    }
+
+    section {
+      padding: 45px 0;
+    }
+
+    .section-title {
+      margin: 0 0 26px;
+      font-size: 1.8rem;
+      letter-spacing: -0.03em;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .project-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 170px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .visual-relic {
+      color: #e2c5ff;
+      background: linear-gradient(135deg, #40314f, #69518b);
+    }
+
+    .visual-eulaan {
+      color: #a5f1e6;
+      background: linear-gradient(135deg, #174b52, #248780);
+    }
+
+    .visual-elixir {
+      color: #f0d7a4;
+      background: linear-gradient(135deg, #45372d, #73604a);
+    }
+
+    .project-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .project h3 {
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+    }
+
+    .tags {
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .project p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-link {
+      margin-top: auto;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .about {
+      max-width: 800px;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .skill {
+      padding: 7px 14px;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+        gap: 12px;
+      }
+
+      .nav {
+        justify-content: center;
+        gap: 16px;
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding: 70px 0 50px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        height: 145px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Home">
+        MM<span>.</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="eyebrow">Game Development · Technical Art</div>
+
+        <h1>Matías Montiel</h1>
+        <h2>Technical Artist | Tools Programmer</h2>
+
+        <p>
+          Software Developer with 12+ years of professional
+          experience, transitioning into game development.
+          Focused on Technical Art, artist-friendly tools,
+          and creative workflows.
+        </p>
+
+        <div class="actions">
+          <a class="button button-primary" href="#projects">
+            View Projects
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://www.linkedin.com/in/matiasmontiel/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-visual visual-relic">
+              Relic Lab
+            </div>
+
+            <div class="project-content">
+              <h3>Relic Lab</h3>
+              <div class="tags">
+                Unity · C# · Shader Graph · UI Toolkit
+              </div>
+
+              <p>
+                A Unity Editor tool for creating stylized
+                materials through non-destructive previews,
+                shader properties, and artist-friendly workflows.
+              </p>
+
+              <a
+                class="project-link"
+                href="https://github.com/matt-arcadehub/Relic-Lab"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual visual-eulaan">
+              Eulaan
+            </div>
+
+            <div class="project-content">
+              <h3>Eulaan: Guardian's Path</h3>
+              <div class="tags">
+                2D Art · Character Design · DragonBones
+              </div>
+
+              <p>
+                Original art and visual development for a
+                fantasy 2D adventure platformer, featuring
+                character turnarounds, environments, UI,
+                and skeletal animation.
+              </p>
+
+              <a
+                class="project-link"
+                href="https://www.artstation.com/matt_artt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit ArtStation ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-visual visual-elixir">
+              Elixir
+            </div>
+
+            <div class="project-content">
+              <h3>Elixir: Hasta la última página</h3>
+              <div class="tags">
+                Construct 2 · 2D Adventure · Collaboration
+              </div>
+
+              <p>
+                A collaborative 2D action-adventure game
+                with point-and-click controls, set in a
+                vertically structured library.
+                My contributions included programming,
+                project organization, and asset integration.
+              </p>
+
+              <a
+                class="project-link"
+                href="https://mattdavinci.itch.io/elixir-hasta-la-ultima-pagina"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Play on Itch.io ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+          <p>
+            I have over 12 years of experience in software
+            development, including technical leadership.
+            I'm currently studying Game Design and Programming
+            at Escuela Da Vinci in Buenos Aires, Argentina.
+          </p>
+
+          <p>
+            My goal is to combine software engineering and
+            artistic workflows to build tools, materials,
+            and systems that support game development teams.
+          </p>
+        </div>
+
+        <div class="skills" aria-label="Skills and tools">
+          <span class="skill">Unity</span>
+          <span class="skill">C#</span>
+          <span class="skill">Shader Graph</span>
+          <span class="skill">UI Toolkit</span>
+          <span class="skill">Maya</span>
+          <span class="skill">Photoshop</span>
+          <span class="skill">React</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Connect</h2>
+
+        <div class="social-links">
+          <a href="https://github.com/matt-arcadehub"
+             target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+
+          <a href="https://www.artstation.com/matt_artt"
+             target="_blank" rel="noopener noreferrer">
+            ArtStation ↗
+          </a>
+
+          <a href="https://mattdavinci.itch.io/"
+             target="_blank" rel="noopener noreferrer">
+            Itch.io ↗
+          </a>
+
+          <a href="https://www.linkedin.com/in/matiasmontiel/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Matías Montiel · Technical Artist | Tools Programmer
+    </div>
+  </footer>
+</body>
+</html>
