@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Matías Montiel | Technical Artist & Tools Programmer</title>
+  <title>Matías Montiel | Technical Artist | Game Dev</title>
   <meta
     name="description"
-    content="Portfolio of Matías Montiel, a software developer transitioning into game development, focused on Technical Art and Tools Programming."
+    content="Portfolio of Matías Montiel, a software developer transitioning into game development with a focus on Technical Art, Tools & Pipeline, and Shaders & Materials."
   />
 
   <style>
@@ -135,16 +135,8 @@
       border-radius: 20px;
     }
 
-    .eyebrow {
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
     h1 {
-      margin: 16px 0 0;
+      margin: 0;
       font-size: clamp(2.8rem, 7vw, 5rem);
       line-height: 1.1;
       letter-spacing: -0.05em;
@@ -154,13 +146,20 @@
       margin: 14px 0 24px;
       font-size: clamp(1.3rem, 3vw, 1.9rem);
       font-weight: 500;
-      color: var(--muted);
+      color: var(--accent);
     }
 
     .hero p {
       max-width: 660px;
       color: var(--muted);
       font-size: 1.05rem;
+    }
+
+    .hero-focus {
+      margin: -14px 0 20px;
+      color: var(--accent);
+      font-size: 0.95rem;
+      font-weight: 600;
     }
 
     .actions {
@@ -329,10 +328,23 @@
         font-size: 0.9rem;
       }
 
+      .container {
+        width: min(1100px, calc(100% - 40px));
+      }
+
       .hero {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 60px 0 50px;
+        gap: 28px;
+        padding: 48px 0 24px;
+      }
+
+      .hero-photo {
+        max-width: 190px;
+        justify-self: center;
+      }
+
+      #projects {
+        padding-top: 24px;
       }
 
       .hero-photo {
@@ -372,19 +384,18 @@
     <div class="container">
       <section class="hero">
         <div class="hero-content">
-          <div class="eyebrow">
-            Game Development · Technical Art
-          </div>
-
           <h1>Matías Montiel</h1>
-          <h2>Technical Artist | Tools Programmer</h2>
+
+          <h2>Technical Artist | Game Dev</h2>
+
+          <p class="hero-focus">Tools &amp; Pipeline · Shaders &amp; Materials</p>
 
           <p>
-            Software Developer with 12+ years of professional
-            experience, transitioning into game development
-            with a focus on Technical Art and Tools Programming.
-            Interested in building artist-friendly tools,
-            shaders, and creative workflows.
+            <p>
+              Software developer with 12+ years of experience, including 5 years in
+              technical leadership, transitioning into game development with a focus
+              on Technical Art.
+            </p>
           </p>
 
           <div class="actions">
@@ -399,6 +410,15 @@
               rel="noopener noreferrer"
             >
               LinkedIn ↗
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="assets/CV_Matias_Montiel_Technical_Artist_Game_Dev_EN.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV ↗
             </a>
           </div>
         </div>
@@ -445,9 +465,9 @@
               </div>
 
               <p>
-                A Unity Editor tool for creating stylized
-                materials through non-destructive previews,
-                shader properties, and artist-friendly workflows.
+                A Unity Editor tool for iterating on stylized materials. It includes a
+                custom editor window, shader controls, presets, and non-destructive
+                previews with apply and discard options.
               </p>
 
               <a
@@ -479,7 +499,7 @@
             <div class="project-content">
               <h3>Eulaan: Guardian's Path</h3>
               <div class="tags">
-                2D Art · Character Design · DragonBones
+                2D Pre-Production Art · Character Design
               </div>
 
               <p>
@@ -518,15 +538,14 @@
             <div class="project-content">
               <h3>Elixir: Hasta la última página</h3>
               <div class="tags">
-                Construct 2 · 2D Adventure · Collaboration
+                2D Adventure · Team Project
               </div>
 
               <p>
-                A collaborative 2D action-adventure game
-                with point-and-click controls, set in a
-                vertically structured library.
-                My contributions included programming,
-                project organization, and asset integration.
+                A 2D action-adventure game with point-and-click controls,
+                set in a vertically structured library. My contributions
+                included Event Sheet scripting, project organization,
+                and asset integration.
               </p>
 
               <a
@@ -547,32 +566,34 @@
 
         <div class="about">
           <p>
-            I have over 12 years of experience in software
-            development, including technical leadership.
-            I'm currently studying Game Design and Programming
+            I have 12+ years of experience in software development, including 5 years
+            in technical leadership. I'm currently studying Game Design and Programming
             at Escuela Da Vinci in Buenos Aires, Argentina.
           </p>
 
           <p>
-            My goal is to combine software engineering and
-            artistic workflows to build tools, materials,
-            and systems that support game development teams.
+            I'm interested in combining programming and art to create tools that make
+            the team's work easier. My current focus is Unity editor tools, pipelines,
+            shaders, and materials.
           </p>
         </div>
 
         <div class="skills" aria-label="Skills and tools">
           <span class="skill">Unity</span>
           <span class="skill">C#</span>
-          <span class="skill">Shader Graph</span>
+          <span class="skill">Unity Editor API</span>
           <span class="skill">UI Toolkit</span>
+          <span class="skill">URP</span>
+          <span class="skill">Shader Graph</span>
           <span class="skill">Maya</span>
+          <span class="skill">Substance 3D Painter</span>
           <span class="skill">Photoshop</span>
-          <span class="skill">React</span>
+          <span class="skill">HLSL (learning)</span>
         </div>
       </section>
 
       <section id="contact">
-        <h2 class="section-title">Connect</h2>
+        <h2 class="section-title">Contact</h2>
 
         <div class="social-links">
           <a href="https://github.com/matt-arcadehub"
@@ -601,7 +622,7 @@
 
   <footer class="footer">
     <div class="container">
-      © 2026 Matías Montiel · Technical Artist | Tools Programmer
+      © 2026 Matías Montiel · Technical Artist | Game Dev
     </div>
   </footer>
 </body>
